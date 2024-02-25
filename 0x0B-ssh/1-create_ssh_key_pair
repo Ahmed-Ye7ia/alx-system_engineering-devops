@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
-# Create an ssh key pair
+# Set the filename for the private key
 
-KEY_NAME="school"
-KEY_PASS="betty"
-KEY_BITS="4096"
+private_key="school"
+bits=4096
+passphrase="betty"
 
-
-ssh-keygen -b $KEY_BITS -N $KEY_PASS -f $KEY_NAME
+ssh-keygen -t rsa -b "$bits" -f "$private_key" -N "$passphrase"
